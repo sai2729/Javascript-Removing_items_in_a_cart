@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Removing Items</title>
+    </head>
+    <body style="margin-top: 9%;">
+        <center>
+            <form style="font-size:30px;">
+                <h1>Select the elements to remove</h1>
+                <p id="first">
+                    <input type="checkbox" id="FM" name="FMpant" value="Flying Machine Pant">
+                    <label for="FM">Flying Machine Pant</label>
+                </p>
+                <p id="second">
+                    <input type="checkbox" id="TH" name="TMshirt" value="Tommy Hilfiger Shirt">
+                    <label for="TH">Tommy Hilfiger Shirt</label>
+                </p>
+                <p id="Third">
+                    <input type="checkbox" id="AS" name="ASshirt" value="Allen solly shirt">
+                    <label for="AS">Allen solly shirt</label>
+                </p>
+                <p id="Fourth">
+                    <input type="checkbox" id="J" name="JTshirt" value="Jockey T-shirt">
+                    <label for="J">Jockey T-shirt</label>
+                </p>
+                <button id="btnrem" style="font-size: 30px;" type="button">Remove</button> 
+            </form>
+        </center>
+
+    </body>
+
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+    
+    <script>
+        $(document).ready(function(){
+
+            $("#btnrem").click(function(){
+
+                var flag=0;
+                if(document.getElementById("FM").checked){
+                    $("#first").fadeOut("3000");
+                    flag=1;
+                }
+                if(document.getElementById("TH").checked){
+                    $("#second").fadeOut("3000");
+                    flag=1;
+                }
+                if(document.getElementById("AS").checked){
+                    $("#Third").fadeOut("3000");
+                    flag=1;
+                }
+                if(document.getElementById("J").checked){
+                    $("#Fourth").fadeOut("3000");
+                    flag=1;
+                }
+                if(flag==0){
+                    alert("Nothing is selected");
+                }
+            });
+        })
+    </script>
+</html>
